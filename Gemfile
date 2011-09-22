@@ -4,11 +4,14 @@ gem 'rails', '3.1.0'
 # For EDGE do gem 'rails',     :git => 'git://github.com/rails/rails.git'
 gem 'jquery-rails'
 gem 'mysql2'
+gem 'haml'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
   gem 'coffee-rails', "~> 3.1.0"
   gem 'uglifier'
+  gem 'compass', '~> 0.12.alpha.0'
+  gem 'html5-boilerplate', :group => :production, :git => 'git://github.com/sporkd/compass-html5-boilerplate.git'
 end
 
 group :test, :development do

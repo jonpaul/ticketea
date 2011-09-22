@@ -57,4 +57,7 @@ Ticketea::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  # Compile HTML5-Boilerplate javascript files
+  config.assets.precompile += %w( jquery.js modernizr+respond.js )
 end
