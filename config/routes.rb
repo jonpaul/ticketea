@@ -1,4 +1,6 @@
 Ticketea::Application.routes.draw do
+  devise_for :users
+
   # first created -> highest priority.
   resources :projects do
     resources :tickets

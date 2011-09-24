@@ -6,6 +6,7 @@ gem 'jquery-rails'
 gem 'mysql2'
 gem 'haml'
 gem 'dynamic_form'
+gem 'devise', '~> 1.4.3'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
