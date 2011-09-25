@@ -7,6 +7,7 @@ gem 'mysql2'
 gem 'haml'
 gem 'dynamic_form'
 gem 'devise', '~> 1.4.3'
+gem 'email_spec'
 
 group :assets do
   gem 'sass-rails', "  ~> 3.1.0"
