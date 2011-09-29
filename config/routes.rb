@@ -58,6 +58,7 @@ Ticketea::Application.routes.draw do
   # match ':controller(/:action(/:id(.:format)))'
   root :to => "projects#index"
   namespace :admin do
+    root :to => "base#index"
     resources :users
   end
 end
