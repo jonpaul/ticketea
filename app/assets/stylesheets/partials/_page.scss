@@ -41,11 +41,22 @@ input:invalid, textarea:invalid {
 .no-boxshadow input:invalid,
 .no-boxshadow textarea:invalid { background-color: #f0dddd; }
 
+Error on line 2 of (css): Invalid CSS after "...ects_controller": expected "}", was ".rbf0dddd; }"
+  Use --trace for backtrace
+  Use --trace for backtrace.
 
 //-----------------------------------
 // Add your own custom styles below
 //-----------------------------------
 
+* {
+  padding: 0px;
+  margin: 0px;
+}
+
+html {
+  background: white;
+}
 * {
   padding: 0px;
   margin: 0px;
@@ -75,6 +86,11 @@ nav {
 a {
   color: #74CC00;
 }
+
+textarea
+  padding: 3px
+  margin-top: 5px
+  margin-bottom: 5px
 
 textarea {
   padding: 3px;
@@ -212,4 +228,4 @@ menu, #ticket .state, .states {
 
 .comment, .new_comment {
   width: 75%;
-}
+
