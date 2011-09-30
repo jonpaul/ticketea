@@ -1,5 +1,5 @@
 class Admin::UsersController < Admin::BaseController
-  before_filter :find_user, :only => [:show, :edit, :update, :destory]
+  before_filter :find_user, :only => [:show, :edit, :update, :destroy]
 
   def index
     @users = User.all(:order => "email")
@@ -42,8 +42,14 @@ class Admin::UsersController < Admin::BaseController
      end
    end
 
-   def destory
-    #
+   def destroy
+     if @user == current_user
+       flash[:alert] = "You cannot delete yourself!"
+     else
+       @user.delete
+       flash[:alert] = "User has been deleted."
+     end
+     redirect_to admin_users_path
    end
 
    private
