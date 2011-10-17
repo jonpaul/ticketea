@@ -26,3 +26,17 @@ Feature: Assigning Permissions
 
     Given I am signed in as "user@ticketee.com"
     Then I should see "Textmate 2"
+
+  Scenario: Creating tickets for a project
+    When I check "View" for "Textmate 2"
+    When I check "Create tickets" for "Textmate 2"
+    And I press "Update"
+    And I follow "Sign out"
+
+    Given I am signed in as "user@ticketee.com"
+    When I follow "Textmate 2"
+    And I follow "New Ticket"
+    And I fill in "Title" with "Shiny!"
+    And I fill in "Description" with "Make it so!"
+    And I press "Create"
+    Then I should see "Ticket has been created."
